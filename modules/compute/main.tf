@@ -7,7 +7,7 @@ resource "azurerm_network_interface" "vm-nic" {
     name                          = "internal"
     subnet_id                     = var.subnet_id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.linuxboxpip.id
+    # public_ip_address_id          = azurerm_public_ip.linuxboxpip.id
   }
 }
 
@@ -46,7 +46,7 @@ resource "azurerm_virtual_machine_extension" "CustomScript" {
   type                 = "CustomScript"
   type_handler_version = "2.0"
 
-    settings = <<SETTINGS
+  settings = <<SETTINGS
   {
     "fileUris": ["https://raw.githubusercontent.com/p1tonidze/devops_todolist_terraform_task/refs/heads/main/install-app.sh"],
     "script": "bash /home/testadmin/install-app.sh"

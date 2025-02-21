@@ -1,24 +1,24 @@
 variable "vm_name" {
-    type        = string
+  type = string
 }
 variable "location" {
-    type        = string
+  type = string
 }
 variable "resource_group_name" {
-    type        = string
+  type = string
 }
 variable "vm_size" {
-    type        = string
+  type = string
 }
 variable "subnet_id" {
-    type        = string
+  type = string
 }
 variable "nsg_id" {
-    type        = string
+  type = string
 }
 variable "pip_id" {
-    type        = string
+  type = string
 }
 variable "ssh_key_public" {
-    type        = string
+  type = string
 }
